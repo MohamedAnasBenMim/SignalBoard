@@ -29,7 +29,7 @@ main { width: min(1380px, calc(100% - 2rem)); margin: 0 auto; padding: 3.2rem 0 
 .hero { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
 .hero h1 { font: 700 clamp(2rem, 4vw, 3.3rem) Manrope, sans-serif; margin: .25rem 0 .6rem; letter-spacing: -.045em; }
 .hero p:not(.eyebrow) { color: var(--muted); margin: 0; }
-.eyebrow { color: #71809c; text-transform: uppercase; letter-spacing: .12em; font-size: .68rem; font-weight: 700; margin: 0; }
+.eyebrow { color: #71809c; text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 700; margin: 0; }
 .customize-button { display: flex; align-items: center; gap: .55rem; border: 1px solid #33415d; color: #d9e4f7; background: #121c30; border-radius: .7rem; padding: .7rem 1rem; cursor: pointer; }
 .customize-button:hover, .icon-button:hover { border-color: var(--mint); }
 .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1rem; }
@@ -37,12 +37,12 @@ main { width: min(1380px, calc(100% - 2rem)); margin: 0 auto; padding: 3.2rem 0 
 .metric-card { padding: 1.25rem; display: flex; align-items: flex-start; gap: .9rem; }
 .metric-icon { width: 40px; height: 40px; border-radius: .7rem; background: rgba(87,230,193,.09); color: var(--mint); display: grid; place-items: center; }
 .metric-card strong { display: block; font: 700 1.55rem Manrope, sans-serif; margin: .25rem 0 .15rem; }
-.change { color: var(--mint); font-size: .72rem; }
+.change { color: var(--mint); font-size: .75rem; }
 .change.warning { color: #f7b955; }
 .panel { padding: 1.25rem; margin-top: 1rem; }
 .panel-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .panel-heading h2 { font: 700 1.05rem Manrope, sans-serif; margin: .3rem 0 0; display: flex; align-items: center; gap: .5rem; }
-.legend { font-size: .76rem; color: var(--muted); display: flex; align-items: center; gap: .45rem; }
+.legend { font-size: .78rem; color: var(--muted); display: flex; align-items: center; gap: .45rem; }
 .legend span { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); }
 .chart { height: 300px; margin-top: 1.2rem; }
 .table-heading { margin-bottom: 1rem; }
@@ -50,15 +50,15 @@ main { width: min(1380px, calc(100% - 2rem)); margin: 0 auto; padding: 3.2rem 0 
 .search-field:focus-within { border-color: var(--mint); }
 .search-field input { background: transparent; color: #edf3ff; border: 0; outline: 0; width: 180px; }
 .table-header, .table-row { display: grid; grid-template-columns: 1.3fr 1fr 1fr .8fr .8fr; align-items: center; gap: 1rem; padding: 0 1rem; }
-.table-header { height: 38px; color: #71809c; text-transform: uppercase; letter-spacing: .09em; font-size: .64rem; border-bottom: 1px solid var(--border); }
+.table-header { height: 38px; color: #71809c; text-transform: uppercase; letter-spacing: .09em; font-size: .75rem; border-bottom: 1px solid var(--border); }
 .table-scroll { height: 336px; overflow: auto; scrollbar-color: #34435f transparent; }
 .table-row { height: 48px; position: absolute; inset: 0 0 auto; border-bottom: 1px solid rgba(32,43,66,.65); color: #b8c5d9; font-size: .82rem; }
 .table-row b { color: #eef4ff; font-weight: 600; display: block; }
-.table-row small { color: #6f7d97; font-size: .64rem; }
+.table-row small { color: #6f7d97; font-size: .75rem; }
 .table-row span:nth-child(3) { display: flex; align-items: center; gap: .45rem; text-transform: capitalize; }
 .status { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); }
 .status.degraded { background: #f7b955; }.status.critical { background: #ff6b75; }
-.table-summary { color: #71809c; font-size: .72rem; margin: .8rem 0 0; }
+.table-summary { color: #71809c; font-size: .75rem; margin: .8rem 0 0; }
 .settings-panel { position: fixed; z-index: 31; right: 0; top: 0; height: 100vh; width: min(390px, 92vw); background: #0d1526; border-left: 1px solid var(--border); padding: 1.5rem; box-shadow: -20px 0 60px rgba(0,0,0,.35); }
 .settings-panel > p { color: var(--muted); line-height: 1.65; font-size: .88rem; }
 .toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border); }

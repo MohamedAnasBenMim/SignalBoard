@@ -34,28 +34,30 @@ export function VirtualizedTable({ rows }: { rows: EventRow[] }) {
           <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Filter events…" />
         </label>
       </div>
-      <div className="table-header" role="row">
-        <span>Service</span><span>Region</span><span>Status</span><span>Latency</span><span>Requests</span>
-      </div>
-      <div ref={parentRef} className="table-scroll" role="table" aria-rowcount={filtered.length}>
-        <div style={{ height: virtualizer.getTotalSize(), position: "relative" }}>
-          {virtualizer.getVirtualItems().map((item) => {
-            const row = filtered[item.index];
-            return (
-              <div
-                className="table-row"
-                role="row"
-                key={row.id}
-                style={{ transform: `translateY(${item.start}px)` }}
-              >
-                <span role="cell"><b>{row.service}</b><small>{new Date(row.timestamp).toLocaleTimeString()}</small></span>
-                <span role="cell">{row.region}</span>
-                <span role="cell"><i className={`status ${row.status}`} />{row.status}</span>
-                <span role="cell">{row.latency} ms</span>
-                <span role="cell">{row.requests.toLocaleString()}</span>
-              </div>
-            );
-          })}
+      <div className="data-table" role="table" aria-rowcount={filtered.length}>
+        <div className="table-header" role="row">
+          <span role="columnheader">Service</span><span role="columnheader">Region</span><span role="columnheader">Status</span><span role="columnheader">Latency</span><span role="columnheader">Requests</span>
+        </div>
+        <div ref={parentRef} className="table-scroll" role="rowgroup">
+          <div role="presentation" style={{ height: virtualizer.getTotalSize(), position: "relative" }}>
+            {virtualizer.getVirtualItems().map((item) => {
+              const row = filtered[item.index];
+              return (
+                <div
+                  className="table-row"
+                  role="row"
+                  key={row.id}
+                  style={{ transform: `translateY(${item.start}px)` }}
+                >
+                  <span role="cell"><b>{row.service}</b><small>{new Date(row.timestamp).toLocaleTimeString()}</small></span>
+                  <span role="cell">{row.region}</span>
+                  <span role="cell"><i className={`status ${row.status}`} />{row.status}</span>
+                  <span role="cell">{row.latency} ms</span>
+                  <span role="cell">{row.requests.toLocaleString()}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
       <p className="table-summary">Showing {filtered.length.toLocaleString()} events with only visible rows rendered.</p>

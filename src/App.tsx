@@ -25,7 +25,7 @@ export default function App() {
         <div className="header-actions">
           <span className={`connection ${connected ? "online" : ""}`}><i />{connected ? "Live" : "Reconnecting"}</span>
           <button className="icon-button" aria-label="Notifications"><Bell size={19} /></button>
-          <button className="avatar" aria-label="Open account menu">AM</button>
+          <button className="avatar" aria-label="AM — open account menu">AM</button>
           <button className="menu-button" aria-label="Open navigation"><Menu size={21} /></button>
         </div>
       </header>
